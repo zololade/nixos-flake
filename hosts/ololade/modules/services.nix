@@ -5,7 +5,7 @@
 
   # Add more services like pipewire, bluetooth, printing, etc. later
  
-  hardware.pulseaudio.enable = false; # Important: disable PulseAudio
+  services.pulseaudio.enable = false; # Important: disable PulseAudio
 
   services.pipewire = {
     enable = true;

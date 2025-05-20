@@ -8,7 +8,7 @@
     # shell = pkgs.bash;
     packages = with pkgs; [
       tree
-      dolphin
+      kdePackages.dolphin
     ];
   };
 

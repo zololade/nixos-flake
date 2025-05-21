@@ -66,5 +66,6 @@
     ifuse
     github-desktop
     upower
+    tlp
     ];
 }

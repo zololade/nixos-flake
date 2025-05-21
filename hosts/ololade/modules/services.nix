@@ -16,6 +16,7 @@
   };
 
 
+  services.tlp.enable = true;
   services.upower.enable = true;
   services.upower.package = pkgs.upower; 
   services.displayManager.sddm.enable = true;

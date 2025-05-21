@@ -1,7 +1,20 @@
 # ~/nixos-flake/hosts/ololade/home.nix
 { config, pkgs, inputs, ... }:
+<<<<<<< HEAD
 
 { 
+=======
+let
+  ags = inputs.ags;
+  astal = inputs.astal; # Add astal here
+in
+{
+  imports = [
+    ags.homeManagerModules.default
+    astal.homeManagerModules.default
+  ];
+  
+>>>>>>> parent of 5cdccb4 (Fix infinite recursion by passing ags/astal directly to home.nix)
   # Define your user's name
   home.username = "ololade";
   home.homeDirectory = "/home/ololade"; # Make sure this matches your actual home directory

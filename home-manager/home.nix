@@ -23,7 +23,6 @@ in {
     gtk4
     libadwaita
     adwaita-icon-theme
-    #agsPkg
     pk.agsFull
     material-design-icons
   ];

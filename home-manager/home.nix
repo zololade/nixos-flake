@@ -18,13 +18,6 @@
     ];
   };
 
-  home.packages = with pkgs; [
-    gtk4
-    libadwaita
-    gnome.adwaita-icon-theme
-    material-design-icons
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-  ];
 
 
 
@@ -48,6 +41,12 @@
     htop
     git
     # Add any other packages you want installed for your user
+
+    gtk4
+    libadwaita
+    gnome.adwaita-icon-theme
+    material-design-icons
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
   # Configure your shell (e.g., bash, zsh)

@@ -8,14 +8,14 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs"; 
 
  # Add ags as a flake input
-     astal = {
-      url = "github:aylur/astal";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    ags = {
-      url = "github:aylur/ags";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+     #astal = {
+      #url = "github:aylur/astal";
+      #inputs.nixpkgs.follows = "nixpkgs";
+    #};
+    #ags = {
+     # url = "github:aylur/ags";
+     # inputs.nixpkgs.follows = "nixpkgs";
+    #};
   };
 
   outputs = { self, nixpkgs, home-manager, ags, astal, ... }@inputs: {

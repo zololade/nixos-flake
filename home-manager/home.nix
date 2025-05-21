@@ -3,9 +3,7 @@
 
 {
 
-
-
-  imports = [
+imports = [
     inputs.ags.homeManagerModules.default
   ];
 
@@ -18,7 +16,6 @@
       accountsservice
     ];
   };
-
 
 
 

@@ -64,14 +64,4 @@ gtk = {
   };
 };
 
-home.sessionVariables = {
-  GTK_THEME = "catppuccin-mocha-rosewater";
-  XDG_CURRENT_DESKTOP = "Hyprland";
-  XCURSOR_THEME = "catppuccin-mocha-rosewater-cursors";
-  # If you want to be extra clear:
-  XDG_DATA_DIRS = "${config.home.homeDirectory}/.local/share:${config.home.homeDirectory}/.icons:${config.home.homeDirectory}/.themes";
-};
-
-
-
 }

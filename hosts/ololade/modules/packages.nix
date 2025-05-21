@@ -64,5 +64,6 @@
     # ipheth-utils
     ifuse
     github-desktop
+    gobject-introspection
     ];
 }

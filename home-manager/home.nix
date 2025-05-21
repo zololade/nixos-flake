@@ -1,8 +1,10 @@
 # ~/nixos-flake/hosts/ololade/home.nix
 { config, pkgs, inputs, ... }:
 
-{
-
+let
+  pk = inputs.ags.packages.x86_64-linux;
+  agsPkg = inputs.ags.packages.x86_64-linux.default;
+in {
   # Define your user's name
   home.username = "ololade";
   home.homeDirectory = "/home/ololade"; # Make sure this matches your actual home directory
@@ -21,6 +23,8 @@
     gtk4
     libadwaita
     adwaita-icon-theme
+    agsPkg
+    pk.io
     material-design-icons
   ];
 

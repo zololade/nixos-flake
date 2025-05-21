@@ -43,7 +43,7 @@
     cliphist
     wlogout
     wl-clipboard
-    btrfs-assistant
+    #btrfs-assistant
     typescript
     vscode
     google-chrome

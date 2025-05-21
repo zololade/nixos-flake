@@ -4,19 +4,21 @@
 {
 
 
-  #home.packages = [inputs.astal.packages.${system}.default];
 
-  #imports = [ inputs.ags.homeManagerModules.default ];
+  imports = [
+    inputs.ags.homeManagerModules.default
+  ];
 
-  #programs.ags = {
-   # enable = true;
-    #configDir = ./ags-config; # Path to your AGS configuration
-    #extraPackages = with pkgs; [
-     # gtksourceview
-      #webkitgtk
-      #accountsservice
-    #];
-  #};
+  programs.ags = {
+    enable = true;
+    configDir = ../ags;
+    extraPackages = with pkgs; [
+      gtksourceview
+      webkitgtk
+      accountsservice
+    ];
+  };
+
 
 
 
@@ -45,9 +47,6 @@
     libadwaita
     adwaita-icon-theme
     material-design-icons
-    #(nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    #inputs.astal.packages.x86_64-linux.default
-    #inputs.astal.packages.${system}.default
   ];
 
   # Configure your shell (e.g., bash, zsh)

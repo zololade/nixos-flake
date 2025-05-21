@@ -3,7 +3,7 @@
 
 let
   pk = inputs.ags.packages.x86_64-linux;
-  agsPkg = inputs.ags.packages.x86_64-linux.default;
+  #agsPkg = inputs.ags.packages.x86_64-linux.default;
 in {
   # Define your user's name
   home.username = "ololade";
@@ -23,8 +23,8 @@ in {
     gtk4
     libadwaita
     adwaita-icon-theme
-    agsPkg
-    pk.io
+    #agsPkg
+    pk.agsFull
     material-design-icons
   ];
 

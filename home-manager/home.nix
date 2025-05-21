@@ -3,19 +3,25 @@
 
 {
 
-#imports = [
- #   inputs.ags.homeManagerModules.default
-  #];
+
+ # imports = [ inputs.ags.homeManagerModules.default ];
 
   #programs.ags = {
    # enable = true;
+
+    # symlink to ~/.config/ags
     #configDir = ../ags;
+
+    # additional packages to add to gjs's runtime
     #extraPackages = with pkgs; [
-     # gtksourceview
-      #webkitgtk
-      #accountsservice
+     # upower
+      #fzf
     #];
   #};
+
+
+
+
 
 
 
@@ -30,8 +36,6 @@
   # Home Manager needs to know where to install its packages
   home.stateVersion = "24.11"; # Set this to your NixOS stateVersion or a Home Manager release (e.g., "24.11")
 
-  # Link some dotfiles
-  #home.file.".config/my-app/config.ini".source = ./files/my-app-config.ini; # Example: path to a local file
 
   # Install user packages
   home.packages = with pkgs; [
@@ -64,9 +68,4 @@
     userEmail = "73138104+zololade@users.noreply.github.com"; # IMPORTANT: Change this
   };
 
-  # You can also enable services that run in your user session
-  # services.gpg-agent.enable = true;
-  # services.syncthing.enable = true;
-
-  # Other Home Manager options can go here, e.g., programs.neovim, programs.firefox, etc.
 }

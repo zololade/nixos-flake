@@ -9,18 +9,28 @@
 
  # Add ags as a flake input
     ags.url = "github:Aylur/ags";
-    ags.inputs.nixpkgs.follows = "nixpkgs"; # Ensure ags uses the same nixpkgs 
-
-   # Add astal as a flake input
-    astal.url = "github:Aylur/astal";
-    astal.inputs.nixpkgs.follows = "nixpkgs"; 
-
+   
   };
 
-  outputs = { self, nixpkgs, home-manager, ags, astal, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+   let
+     system = "x86_64-linux";
+   in
+   {
     nixosConfigurations.ololade = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux"; 
-      specialArgs = { inherit inputs; }; 
+      specialArgs = { inherit inputs; };
+      
+      homeConfigurations."${username}" = home-manager.lib.homeManagerConfiguration {
+      pkgs = import nixpkgs { inherit system; };
+
+      # pass inputs as specialArgs
+      extraSpecialArgs = { inherit inputs; };
+
+      # import your home.nix
+      modules = [ ./home-manager/home.nix ];
+    };
+       
       modules = [
         ./hosts/ololade/configuration.nix
         home-manager.nixosModules.home-manager

@@ -1,12 +1,7 @@
 # ~/nixos-flake/hosts/ololade/home.nix
 { config, pkgs, inputs, ... }:
 
-{
-  imports = [
-    ags.homeManagerModules.default
-    astal.homeManagerModules.default
-  ];
-  
+{ 
   # Define your user's name
   home.username = "ololade";
   home.homeDirectory = "/home/ololade"; # Make sure this matches your actual home directory
@@ -23,6 +18,7 @@
     neovim
     htop
     git
+    inputs.astal.packages.${system}.default
     # Add any other packages you want installed for your user
   ];
 

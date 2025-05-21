@@ -44,8 +44,6 @@
 #    };
 #  };
 
-    home-manager.users.ololade = import ../../home-manager/home.nix; 
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

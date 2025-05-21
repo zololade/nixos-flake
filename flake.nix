@@ -9,9 +9,10 @@
 
  # Add ags as a flake input
     ags.url = "github:Aylur/ags";
+    astal.url  = "github:Aylur/astal";
   };
 
-  outputs = { self, nixpkgs, home-manager, ags, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ags, astal, ... }@inputs: {
     nixosConfigurations.ololade = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux"; 
       specialArgs = { inherit inputs; }; 
@@ -28,6 +29,9 @@
        ];
 
        buildInputs = [
+
+        nixpkgs.legacyPackages.x86_64-linux.gobject-introspection
+
         # includes astal3 astal4 astal-io by default
         (ags.packages.x86_64-linux.default.override { 
           extraPackages = [

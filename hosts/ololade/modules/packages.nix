@@ -63,5 +63,6 @@
     usbmuxd
     # ipheth-utils
     ifuse
+    github-desktop
     ];
 }

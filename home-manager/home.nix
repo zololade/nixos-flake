@@ -46,7 +46,7 @@
     adwaita-icon-theme
     material-design-icons
     #(nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    inputs.astal.packages.x86_64-linux.default
+    #inputs.astal.packages.x86_64-linux.default
     #inputs.astal.packages.${system}.default
   ];
 

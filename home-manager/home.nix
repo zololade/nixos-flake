@@ -3,58 +3,6 @@
 
 {
 
- # --- IMPORT THE AGS HOME MANAGER MODULE HERE ---
-  imports = [
-    inputs.ags.homeManagerModules.default # This line imports the ags module
-  ];
-
-  # Enable and configure ags
-  programs.ags = {
-    enable = true;
-
-    # Point to your ags configuration directory.
-    # BEST PRACTICE: Keep your ags config files (JS, CSS, etc.)
-    # within your dotfiles and let Home Manager symlink them.
-    # Example: If your ags config is in ~/nixos-flake/ags-config/
-    # This path is relative to the location of THIS home.nix file.
-    configDir = ../ags-config; # Assuming 'ags-config' is a directory next to 'home' directory
-
-    # Add any extra packages that your ags configuration might depend on.
-    # ags often needs external tools for its modules (network, audio, bluetooth, etc.)
-    extraPackages = with pkgs; [
-      gjs # JavaScript engine for GTK, essential for ags
-      gtk3 # For GTK3 applications/widgets that ags might use
-      gtk4 # For GTK4 applications/widgets that ags might use
-      gtk-layer-shell # Crucial for Wayland positioning (if not pulled by gtk4)
-      networkmanager # If you have a network module
-      upower # For battery status
-      gnome.gnome-bluetooth # For Bluetooth module
-      pamixer # For audio control
-      brightnessctl # For screen brightness control
-      swww # For wallpaper management (if used in ags)
-      grimblast # For screenshots (if used in ags)
-      hyprpicker # For color picking (if used in ags)
-      # ... add any other tools your ags config relies on that are not already
-      # part of your system environment or ags's default dependencies.
-    ];
-  };
-
-  # Example: If you are using Hyprland, you might autostart ags here
-  # programs.hyprland = {
-  #   enable = true;
-  #   extraConfig = ''
-  #     exec-once = ags
-  #   '';
-  # };
-
-
-
-
-
-
-
-
-
   # Define your user's name
   home.username = "ololade";
   home.homeDirectory = "/home/ololade"; # Make sure this matches your actual home directory

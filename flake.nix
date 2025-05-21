@@ -12,24 +12,10 @@
    
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
-   let
-     system = "x86_64-linux";
-   in
-   {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:{
     nixosConfigurations.ololade = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux"; 
       specialArgs = { inherit inputs; };
-      
-      homeConfigurations."${username}" = home-manager.lib.homeManagerConfiguration {
-      pkgs = import nixpkgs { inherit system; };
-
-      # pass inputs as specialArgs
-      extraSpecialArgs = { inherit inputs; };
-
-      # import your home.nix
-      modules = [ ./home-manager/home.nix ];
-    };
        
       modules = [
         ./hosts/ololade/configuration.nix

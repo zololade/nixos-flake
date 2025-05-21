@@ -1,5 +1,5 @@
 # ~/nixos-flake/hosts/ololade/home.nix
-{ config, pkgs, inputs, ags, astal, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [

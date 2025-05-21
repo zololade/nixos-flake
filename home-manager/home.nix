@@ -45,7 +45,7 @@
     libadwaita
     adwaita-icon-theme
     material-design-icons
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    #(nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
   # Configure your shell (e.g., bash, zsh)

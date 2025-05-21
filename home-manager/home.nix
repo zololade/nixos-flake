@@ -43,7 +43,7 @@
     # Add any other packages you want installed for your user
     gtk4
     libadwaita
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
     material-design-icons
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];

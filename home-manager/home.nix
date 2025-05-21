@@ -4,7 +4,7 @@
 {
 
 
-
+  home.packages = [inputs.astal.packages.${system}.default];
 
   #imports = [ inputs.ags.homeManagerModules.default ];
 

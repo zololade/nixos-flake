@@ -8,11 +8,13 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs"; 
 
  # Add ags as a flake input
-    ags.url = "github:Aylur/ags";
-
+    ags = {
+      url = "github:Aylur/ags"; # Fetches the latest ags from GitHub
+      inputs.nixpkgs.follows = "nixpkgs"; # Ensure ags uses the same nixpkgs
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ags, ... }@inputs: {
     nixosConfigurations.ololade = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux"; 
       specialArgs = { inherit inputs; }; 

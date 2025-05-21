@@ -1,3 +1,4 @@
+# ~/nixos-flake/flake.nix
 {
   description = "My NixOS configuration";
 
@@ -36,3 +37,4 @@
     # };
   };
 }
+

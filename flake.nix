@@ -1,20 +1,12 @@
 {
+  description = "My NixOS configuration";
+
   inputs = {
-<<<<<<< HEAD
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-=======
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; 
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs"; 
-
-    ags = {
-      url = "github:aylur/ags";
-
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    
+    ags.url = "github:aylur/ags"; 
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
@@ -25,20 +17,12 @@
         ./hosts/ololade/configuration.nix
         home-manager.nixosModules.home-manager
       ];
->>>>>>> parent of 96fc239 (stable flake)
     };
 
-    ags.url = "github:aylur/ags"; 
-  };
 
-<<<<<<< HEAD
-  outputs = { home-manager, nixpkgs, ... }@inputs:
-  let
-    system = "x86_64-linux";
-  in
-  {
-    homeConfigurations.ololade = home-manager.lib.homeManagerConfiguration {
-      pkgs = import nixpkgs { inherit system; };
+
+     homeConfigurations.ololade = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
       # pass inputs as specialArgs
       extraSpecialArgs = { inherit inputs; };
@@ -46,7 +30,8 @@
       # import your home.nix
       modules = [ ./home-manager/home.nix ];
     };
-=======
+
+
      devShells.x86_64-linux.default = nixpkgs.legacyPackages.x86_64-linux.mkShell {
        packages = with nixpkgs.legacyPackages.x86_64-linux; [
          git
@@ -54,13 +39,5 @@
        ];
 
      };
->>>>>>> parent of 96fc239 (stable flake)
   };
 }
-
-
-
-
-
-
-

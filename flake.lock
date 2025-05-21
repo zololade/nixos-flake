@@ -3,13 +3,7 @@
     "ags": {
       "inputs": {
         "astal": "astal",
-<<<<<<< HEAD
         "nixpkgs": "nixpkgs"
-=======
-        "nixpkgs": [
-          "nixpkgs"
-        ]
->>>>>>> parent of 96fc239 (stable flake)
       },
       "locked": {
         "lastModified": 1744557573,

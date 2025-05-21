@@ -34,9 +34,7 @@
     #     nodejs
     #   ];
     # };
->>>>>>> parent of 3afc580 (added ags)
   };
-=======
     # Nixpkgs provides the core NixOS system and packages.
     # We'll pin to the 'nixos-unstable' branch for the latest features,
     # as your current system.stateVersion implies you're on a recent channel.
@@ -70,5 +68,4 @@
     #   ];
     # };
   };
->>>>>>> parent of 3afc580 (added ags)
 }

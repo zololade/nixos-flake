@@ -20,12 +20,8 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations.ololade = nixpkgs.lib.nixosSystem {
-<<<<<<< HEAD
-      system = system;
-=======
       system = "x86_64-linux"; 
       specialArgs = { inherit inputs; }; 
->>>>>>> parent of b5bdee2 (fix)
       modules = [
         ./hosts/ololade/configuration.nix
         home-manager.nixosModules.home-manager

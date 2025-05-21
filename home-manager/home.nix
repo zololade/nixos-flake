@@ -1,9 +1,6 @@
 # ~/nixos-flake/hosts/ololade/home.nix
-{ config, pkgs, inputs, ... }:
-let
-  ags = inputs.ags;
-  astal = inputs.astal; # Add astal here
-in
+{ config, pkgs, inputs, ags, astal, ... }:
+
 {
   imports = [
     ags.homeManagerModules.default

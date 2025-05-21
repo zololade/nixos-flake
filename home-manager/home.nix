@@ -45,4 +45,33 @@ in {
     userEmail = "73138104+zololade@users.noreply.github.com"; # IMPORTANT: Change this
   };
 
+gtk = {
+  enable = true;
+
+  theme = {
+    name = "catppuccin-mocha-rosewater"; # Use the exact folder name
+    package = null; # Since you're using a local theme
+  };
+
+  iconTheme = {
+    name = "Papirus-Dark"; # or your Catppuccin icon theme name
+    package = null;
+  };
+
+  cursorTheme = {
+    name = "catppuccin-mocha-rosewater-cursors"; # optional
+    package = null;
+  };
+};
+
+home.sessionVariables = {
+  GTK_THEME = "catppuccin-mocha-rosewater";
+  XDG_CURRENT_DESKTOP = "Hyprland";
+  XCURSOR_THEME = "catppuccin-mocha-rosewater-cursors";
+  # If you want to be extra clear:
+  XDG_DATA_DIRS = "${config.home.homeDirectory}/.local/share:${config.home.homeDirectory}/.icons:${config.home.homeDirectory}/.themes";
+};
+
+
+
 }

@@ -6,17 +6,17 @@
 
 
 
-  imports = [ inputs.ags.homeManagerModules.default ];
+  #imports = [ inputs.ags.homeManagerModules.default ];
 
-  programs.ags = {
-    enable = true;
-    configDir = ./ags-config; # Path to your AGS configuration
-    extraPackages = with pkgs; [
-      gtksourceview
-      webkitgtk
-      accountsservice
-    ];
-  };
+  #programs.ags = {
+   # enable = true;
+    #configDir = ./ags-config; # Path to your AGS configuration
+    #extraPackages = with pkgs; [
+     # gtksourceview
+      #webkitgtk
+      #accountsservice
+    #];
+  #};
 
 
 
@@ -41,7 +41,6 @@
     htop
     git
     # Add any other packages you want installed for your user
-
     gtk4
     libadwaita
     gnome.adwaita-icon-theme

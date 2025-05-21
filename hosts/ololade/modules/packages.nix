@@ -5,6 +5,7 @@
 
   
   environment.systemPackages = with pkgs; [
+    jq
     libsecret
     gnome-keyring
     home-manager

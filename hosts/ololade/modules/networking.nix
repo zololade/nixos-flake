@@ -8,6 +8,7 @@
   # Bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+  hardware.bluetooth.package = pkgs.bluez;
 
   services.dbus.enable = true;
   services.usbmuxd.enable = true;

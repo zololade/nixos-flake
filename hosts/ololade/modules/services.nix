@@ -14,7 +14,10 @@
     pulse.enable = true;
     jack.enable = true;
   };
- 
+
+
+  services.upower.enable = true;
+  services.upower.package = pkgs.upower; 
   services.displayManager.sddm.enable = true;
   services.displayManager.defaultSession = "hyprland-uwsm";
   services.desktopManager.plasma6.enable = false; # Disable if KDE was ever enabled

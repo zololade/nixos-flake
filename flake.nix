@@ -8,8 +8,14 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs"; 
 
  # Add ags as a flake input
-    ags.url = "github:Aylur/ags";
-    astal.url  = "github:Aylur/astal";
+     astal = {
+      url = "github:aylur/astal";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ags = {
+      url = "github:aylur/ags";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ags, astal, ... }@inputs: {
@@ -28,17 +34,6 @@
          nodejs
        ];
 
-       buildInputs = [
-
-        nixpkgs.legacyPackages.x86_64-linux.gobject-introspection
-
-        # includes astal3 astal4 astal-io by default
-        (ags.packages.x86_64-linux.default.override { 
-          extraPackages = [
-            # cherry pick packages
-          ];
-        })
-      ];
      };
   };
 }

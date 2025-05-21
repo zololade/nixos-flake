@@ -22,7 +22,6 @@
   in {
     nixosConfigurations.ololade = nixpkgs.lib.nixosSystem {
       system = system;
-      #specialArgs = { inherit inputs; };
       modules = [
         ./hosts/ololade/configuration.nix
         home-manager.nixosModules.home-manager

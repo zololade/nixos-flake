@@ -6,9 +6,18 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; 
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs"; 
+
+ # Add ags as a flake input
+    ags.url = "github:Aylur/ags";
+    ags.inputs.nixpkgs.follows = "nixpkgs"; # Ensure ags uses the same nixpkgs 
+
+   # Add astal as a flake input
+    astal.url = "github:Aylur/astal";
+    astal.inputs.nixpkgs.follows = "nixpkgs"; 
+
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ags, astal, ... }@inputs: {
     nixosConfigurations.ololade = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux"; 
       specialArgs = { inherit inputs; }; 

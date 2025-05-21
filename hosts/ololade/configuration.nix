@@ -21,11 +21,22 @@
   };
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelParams = [
-    "quiet"
-    "splash"
-    "loglevel=3"
-  ];
+ boot = {
+    # Suppress kernel and system messages
+    consoleLogLevel = 0;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "splash"
+      "udev.log_priority=3"
+      "rd.udev.log_level=3"
+      "rd.systemd.show_status=false"
+    ];
+
+    # Optional: Enable Plymouth for a graphical splash screen
+    plymouth.enable = true;
+    # You can customize the theme and other settings as needed
+  };
 
   #swap
   zramSwap.enable = true;

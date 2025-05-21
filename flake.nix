@@ -21,15 +21,13 @@
 
 
 
-     homeConfigurations.ololade = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-      # pass inputs as specialArgs
-      extraSpecialArgs = { inherit inputs; };
-
-      # import your home.nix
-      modules = [ ./home-manager/home.nix ];
-    };
+homeConfigurations.ololade = home-manager.lib.homeManagerConfiguration {
+  pkgs = import nixpkgs { system = "x86_64-linux"; };
+  extraSpecialArgs = { inherit inputs; };
+  modules = [
+    ./home-manager/home.nix
+  ];
+};
 
 
      devShells.x86_64-linux.default = nixpkgs.legacyPackages.x86_64-linux.mkShell {

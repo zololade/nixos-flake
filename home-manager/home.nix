@@ -3,12 +3,8 @@
 
 {
 
-
-  # add the home manager module
-  imports = [ inputs.ags.homeManagerModules.default ];
-
- # programs.ags = {
-    #enable = true;
+  #programs.ags = {
+   # enable = true;
 
     # symlink to ~/.config/ags
     #configDir = ../ags;

@@ -29,7 +29,7 @@
 
        buildInputs = [
         # includes astal3 astal4 astal-io by default
-        (ags.packages.${system}.default.override { 
+        (ags.packages.x86_64-linux.default.override { 
           extraPackages = [
             # cherry pick packages
           ];

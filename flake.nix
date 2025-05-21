@@ -8,10 +8,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs"; 
 
  # Add ags as a flake input
-    #ags = {
-      #url = "github:Aylur/ags"; # Fetches the latest ags from GitHub
-      #inputs.nixpkgs.follows = "nixpkgs"; # Ensure ags uses the same nixpkgs
-    #};
+    ags.url = "github:Aylur/ags";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {

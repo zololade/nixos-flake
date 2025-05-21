@@ -3,6 +3,34 @@
 
 {
 
+
+
+
+  imports = [ inputs.ags.homeManagerModules.default ];
+
+  programs.ags = {
+    enable = true;
+    configDir = ./ags-config; # Path to your AGS configuration
+    extraPackages = with pkgs; [
+      gtksourceview
+      webkitgtk
+      accountsservice
+    ];
+  };
+
+  home.packages = with pkgs; [
+    gtk4
+    libadwaita
+    gnome.adwaita-icon-theme
+    material-design-icons
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+  ];
+
+
+
+
+
+
   # Define your user's name
   home.username = "ololade";
   home.homeDirectory = "/home/ololade"; # Make sure this matches your actual home directory

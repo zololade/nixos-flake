@@ -35,7 +35,6 @@
     zip
     gnome-tweaks
     brightnessctl
-    #dev tools 
     nodejs 
     git
     python3 
@@ -53,7 +52,6 @@
     cliphist
     wlogout
     wl-clipboard
-    #btrfs-assistant
     typescript
     vscode
     google-chrome
@@ -64,7 +62,6 @@
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
-    #lxqt.lxqt-policykit
     polkit_gnome
     swww
     networkmanager
@@ -72,8 +69,6 @@
     bluez
     blueman
     libimobiledevice
-    usbmuxd
-    # ipheth-utils
     ifuse
     github-desktop
     upower

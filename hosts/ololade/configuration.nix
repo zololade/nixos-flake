@@ -49,11 +49,11 @@
     options = "--delete-older-than 7d"; # Example: keep everything from the last 7 days
   };  
 
-#  nix = {
-#    settings = {
-#      experimental-features = [ "nix-command" "flakes" ];
-#    };
-#  };
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+    };
+  };
 
   system.stateVersion = "24.11"; # Did you read the comment?
 

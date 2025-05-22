@@ -3,9 +3,7 @@
 {
   services.openssh.enable = true;
 
-  # Add more services like pipewire, bluetooth, printing, etc. later
- 
-  services.pulseaudio.enable = false; # Important: disable PulseAudio
+  # Add more services like pipewire, bluetooth, printing, etc. later 
 
   services.pipewire = {
     enable = true;
@@ -22,18 +20,21 @@
     package = pkgs.kdePackages.sddm;
    };
 
-  services.usbmuxd.enable = true;
+  services.usbmuxd = {
+    enable = true;
+    package = pkgs.usbmuxd2;
+  };
+
+
+
   services.tlp.enable = true;
   services.upower.enable = true;
   services.upower.package = pkgs.upower; 
-  #services.displayManager.sddm.enable = true;
   services.displayManager.defaultSession = "hyprland-uwsm";
-  services.desktopManager.plasma6.enable = false; # Disable if KDE was ever enabled
   programs.hyprland.enable = true;
   programs.hyprland.xwayland.enable = true;
   xdg.portal.enable = true;
   xdg.portal.extraPortals = with pkgs; [ xdg-desktop-portal-gtk xdg-desktop-portal-hyprland ];
-  #services.displayManager.sddm.wayland.enable = true;
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
   programs.hyprland.withUWSM = true;

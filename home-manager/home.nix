@@ -38,7 +38,7 @@ in {
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    historyFile = "${config.xdg.dataHome}/bash_history";
+    #historyFile = "${config.xdg.dataHome}/bash_history";
     initExtra = ''
       # Your custom bash configurations here
       alias ll="ls -lh"

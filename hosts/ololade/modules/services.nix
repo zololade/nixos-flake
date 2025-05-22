@@ -38,7 +38,6 @@
   services.hypridle.enable = true;
   programs.hyprland.withUWSM = true;
 
-  services.picom.enable = true;
   services.dbus.enable = true;
   services.geoclue2.enable = true;
   services.flatpak.enable = true;

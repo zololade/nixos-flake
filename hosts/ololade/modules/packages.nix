@@ -12,8 +12,8 @@
         loginBackground = true;
       }
     )
-
-    picom
+    
+    python313Packages.requests
     jq
     libsecret
     gnome-keyring

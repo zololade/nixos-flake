@@ -71,4 +71,23 @@ gtk = {
   };
 };
 
+#wallpaper
+systemd.user.services.coolwall = {
+    Unit = {
+      Description = "CoolWall Script";
+      After = [ "network-online.target" ];
+      Wants = [ "network-online.target" ];
+    };
+
+    Service = {
+      ExecStart = "/home/ololade/.config/coolwall.py";
+      Restart = "on-failure";
+    };
+
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
+  };
+
+
 }

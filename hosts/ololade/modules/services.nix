@@ -1,12 +1,6 @@
 { config, pkgs, ... }:
 
-let
-  sddmWithMultimedia = pkgs.kdePackages.sddm.overrideAttrs (oldAttrs: rec {
-    buildInputs = oldAttrs.buildInputs or [] ++ [
-      pkgs.kdePackages.qtmultimedia
-    ];   
-  });
-in{
+{
   services.openssh.enable = true;
 
   # Add more services like pipewire, bluetooth, printing, etc. later
@@ -21,20 +15,14 @@ in{
     jack.enable = true;
   };
 
-  
-services.displayManager.sddm = {
+  services.displayManager.sddm = {
     enable = true;
+    theme = "catppuccin-mocha";
     wayland.enable = true;
+    package = pkgs.kdePackages.sddm;
+   };
 
-    package = sddmWithMultimedia;
-   
-    settings = {
-      Theme = {
-        Current = "sddm-astronaut-theme";
-      };
-    };
-  };
-
+  services.usbmuxd.enable = true;
   services.tlp.enable = true;
   services.upower.enable = true;
   services.upower.package = pkgs.upower; 
@@ -49,7 +37,9 @@ services.displayManager.sddm = {
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
   programs.hyprland.withUWSM = true;
-  
+
+  services.picom.enable = true;
+  services.dbus.enable = true;
   services.geoclue2.enable = true;
   services.flatpak.enable = true;
   programs.firefox.enable = true;
@@ -64,4 +54,23 @@ services.displayManager.sddm = {
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
+
+  
+  security.polkit.enable = true;
+
+  systemd = {
+    user.services.polkit-gnome-authentication-agent-1 = {
+      description = "polkit-gnome-authentication-agent-1";
+      wantedBy = ["graphical-session.target"];
+      wants = ["graphical-session.target"];
+      after = ["graphical-session.target"];
+      serviceConfig = {
+        Type = "simple";
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        Restart = "on-failure";
+        RestartSec = 1;
+        TimeoutStopSec = 10;
+      };
+    };
+  };
  }

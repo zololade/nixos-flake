@@ -1,42 +1,19 @@
 { config, pkgs, ... }:
 
-let
-  customAstronaut = pkgs.stdenv.mkDerivation {
-    pname    = "sddm-astronaut-theme-custom";
-    version  = "1.0.0";
-
-    # ← Use the latest commit SHA from the repo’s commit list:
-    src = pkgs.fetchFromGitHub {
-      owner   = "Keyitdev";
-      repo    = "sddm-astronaut-theme";
-      rev     = "bf4d017";       # commit “Update: Added option to enable sddm in setup script.” Apr 14, 2025 :contentReference[oaicite:0]{index=0}
-      # You’ll need the matched SHA256 hash below. See note 👇
-      sha256  = "1sj9b381gh6xpp336lq1by5qsa54chqcgq37r8daqbp2igp8dh14";
-    };
-
-    installPhase = ''
-      mkdir -p $out/share/sddm/themes/sddm-astronaut-theme
-      cp -r * $out/share/sddm/themes/sddm-astronaut-theme
-
-      # Patch metadata.desktop to pick the variant you want
-      sed -i 's|ConfigFile=.*|ConfigFile=Themes/cyberpunk.conf|' \
-        $out/share/sddm/themes/sddm-astronaut-theme/metadata.desktop
-    '';
-
-    meta = {
-      description = "Custom SDDM Astronaut theme with modified config";
-      homepage    = "https://github.com/Keyitdev/sddm-astronaut-theme";
-      license     = pkgs.lib.licenses.gpl3;
-    };
-  };
-in{
+{
   nixpkgs.config.allowUnfree = true;
-
   
   environment.systemPackages = with pkgs; [
-    sddm-chili-theme
-    #sddm-astronaut
-    customAstronaut
+    (catppuccin-sddm.override {
+        flavor = "mocha";
+        font  = "Noto Sans";
+        fontSize = "9";
+        #background = "${./wallpaper.png}";
+        loginBackground = true;
+      }
+    )
+
+    picom
     jq
     libsecret
     gnome-keyring
@@ -87,7 +64,8 @@ in{
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
-    lxqt.lxqt-policykit
+    #lxqt.lxqt-policykit
+    polkit_gnome
     swww
     networkmanager
     networkmanagerapplet   # GUI applet (for systems with a panel/tray)

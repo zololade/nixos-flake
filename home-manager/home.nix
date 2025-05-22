@@ -3,7 +3,6 @@
 
 let
   pk = inputs.ags.packages.x86_64-linux;
-  #agsPkg = inputs.ags.packages.x86_64-linux.default;
 in {
   # Define your user's name
   home.username = "ololade";
@@ -12,6 +11,14 @@ in {
   # Home Manager needs to know where to install its packages
   home.stateVersion = "24.11"; # Set this to your NixOS stateVersion or a Home Manager release (e.g., "24.11")
 
+
+  xdg = {
+    enable = true;
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
+  };
 
   # Install user packages
   home.packages = with pkgs; [

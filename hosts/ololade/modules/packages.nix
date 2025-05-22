@@ -13,7 +13,6 @@
       }
     )
     
-    python313Packages.requests
     jq
     libsecret
     gnome-keyring

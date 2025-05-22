@@ -2,21 +2,9 @@
 
 let
   sddmWithMultimedia = pkgs.kdePackages.sddm.overrideAttrs (oldAttrs: rec {
-    # Add qtmultimedia to build inputs of sddm greeter
     buildInputs = oldAttrs.buildInputs or [] ++ [
       pkgs.kdePackages.qtmultimedia
-    ];
-
-    # Also override the greeter package if it’s separate
-    # SDDM 2025+ usually uses `sddm-greeter-qt6` as the greeter
-    # So let's patch that too:
-    passthru = oldAttrs.passthru // {
-      greeter = (pkgs.kdePackages.sddm-greeter-qt6.overrideAttrs (greeterAttrs: {
-        buildInputs = greeterAttrs.buildInputs or [] ++ [
-          pkgs.kdePackages.qtmultimedia
-        ];
-      }));
-    };
+    ];   
   });
 in{
   services.openssh.enable = true;
@@ -43,7 +31,6 @@ services.displayManager.sddm = {
     settings = {
       Theme = {
         Current = "sddm-astronaut-theme";
-        ConfFile = "cyberpunk.conf";
       };
     };
   };

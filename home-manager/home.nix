@@ -43,7 +43,6 @@ in {
     '';
   };
 
-
 #code
   programs.vscode = {
     enable = true;

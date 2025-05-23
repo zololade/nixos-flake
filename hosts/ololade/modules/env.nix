@@ -6,10 +6,4 @@
     WLR_NO_HARDWARE_CURSORS = "1"; # just in case of cursor bugs
   };
 
-  environment.variables = {
-    TERMINAL = "kitty";
-     EDITOR = "nvim";
-    # BROWSER = "firefox";
-  };
-
 }

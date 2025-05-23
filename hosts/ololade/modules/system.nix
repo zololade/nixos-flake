@@ -10,15 +10,5 @@
     keyMap = "us";
   };
 
-  xdg.terminal-exec.settings = {
-    Hyprland = [
-      "kitty.desktop"
-    ];
-    default = [
-     "kitty.desktop"
-    ];
-  };
-
-
 }
 

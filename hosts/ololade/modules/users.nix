@@ -11,7 +11,6 @@ virtualisation.docker.enable = true;
     # shell = pkgs.bash;
     packages = with pkgs; [
       tree
-      kdePackages.dolphin
       vlc
       libreoffice
     ];

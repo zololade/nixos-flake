@@ -13,6 +13,7 @@
       }
     )
     
+    kdePackages.dolphin
     jq
     libsecret
     home-manager
@@ -37,7 +38,6 @@
     python3 
     gcc 
     nmap
-    #alacritty
     gammastep
     imv
     dunst

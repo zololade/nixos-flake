@@ -46,8 +46,9 @@
   programs.gdk-pixbuf.modulePackages = [ pkgs.librsvg ]; 
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.sddm.enableGnomeKeyring = true;
-  services.dbus.packages = with pkgs; [ gnome-keyring ];
+  programs.seahorse.enable = true;  
   
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

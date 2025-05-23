@@ -15,7 +15,6 @@
     
     jq
     libsecret
-    gnome-keyring
     home-manager
     curl htop
     pciutils usbutils
@@ -61,7 +60,6 @@
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
-    polkit_gnome
     swww
     networkmanager
     networkmanagerapplet   # GUI applet (for systems with a panel/tray)

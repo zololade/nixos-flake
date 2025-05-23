@@ -12,7 +12,8 @@
         loginBackground = true;
       }
     )
-       
+    
+    xdg-utils       
     jq
     libsecret
     home-manager

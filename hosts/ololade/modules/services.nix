@@ -48,7 +48,8 @@
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.sddm.enableGnomeKeyring = true;
   programs.seahorse.enable = true;  
-  
+  xdg.terminal-exec.enable = true;
+   
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

@@ -20,8 +20,7 @@
     pciutils usbutils
     killall
     catppuccin-gtk catppuccin-papirus-folders catppuccin-cursors
-    qt6ct
-    vim xfce.mousepad
+    vim
     wget
     eww
     btop
@@ -38,15 +37,14 @@
     python3 
     gcc 
     nmap
-    alacritty
+    #alacritty
     gammastep
     imv
     dunst
     flatpak
     kitty
     kdePackages.qt6ct kdePackages.qtstyleplugin-kvantum kdePackages.breeze-gtk
-    kdePackages.qtvirtualkeyboard kdePackages.breeze-icons kdePackages.okular
-    kdePackages.qtsvg kdePackages.qtmultimedia
+    kdePackages.breeze-icons kdePackages.okular
     cliphist
     wlogout
     wl-clipboard

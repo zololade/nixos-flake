@@ -72,10 +72,9 @@
     tlp
     ];
 
-
-     programs.java = {
-       enable = true;
-       package = pkgs.jdk; # This installs the latest LTS version of OpenJDK
-     };
+    programs.java = {
+      enable = true;
+      package = pkgs.jdk; # This installs the latest LTS version of OpenJDK
+    };
 
 }

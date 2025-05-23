@@ -44,6 +44,13 @@ in {
     '';
   };
 
+
+#code
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode.fhs;
+  };
+
   # Enable git configuration
   programs.git = {
     enable = true;

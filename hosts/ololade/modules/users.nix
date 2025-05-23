@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+
+virtualisation.docker.enable = true;
+
   users.users.ololade = {
     isNormalUser = true;
     description = "Ololade";

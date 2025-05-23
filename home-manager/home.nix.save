@@ -89,13 +89,15 @@ systemd.user.services.coolwall = {
   };
 
 #code
-  xdg.desktopEntries.code = {
-    name = "Visual Studio Code";
-    comment = "Code Editing. Redefined. (with Gnome Libsecret)";
-    exec = "${pkgs.vscode}/bin/code --password-store=gnome-libsecret %U";
-    icon = "code";
-    terminal = false;
-    categories = [ "Development" "IDE" ];
+   xdg.desktopEntries = {
+    "code-password-store" = {
+      name = "Visual Studio Code (Gnome Libsecret)";
+      comment = "Code Editing. Redefined. (with Gnome Libsecret)";
+      exec = "${pkgs.vscode}/bin/code --password-store=gnome-libsecret %U";
+      icon = "vscode"; # Use the existing icon
+      terminal = false;
+      categories = [ "Development" "IDE" ];
+    };
   };
 
 }

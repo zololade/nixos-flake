@@ -22,7 +22,6 @@ in {
 
   # Install user packages
   home.packages = with pkgs; [
-    firefox
     neovim
     htop
     git

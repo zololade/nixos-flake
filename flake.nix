@@ -23,11 +23,6 @@
     homeConfigurations.ololade = home-manager.lib.homeManagerConfiguration {
       pkgs = import nixpkgs { system = "x86_64-linux"; };
       extraSpecialArgs = { inherit inputs self; };
-
-     # useGlobalPkgs = true;
-     # useUserPackages = true;
-     # users.ololade = import ./home-manager/home.nix;      
-
       modules = [
        ./home-manager/home.nix
       ];

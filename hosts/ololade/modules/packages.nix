@@ -61,10 +61,9 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     swww
-    networkmanager
     networkmanagerapplet   # GUI applet (for systems with a panel/tray)
     bluez
-    blueman
+    kdePackages.bluez-qt
     libimobiledevice
     ifuse
     github-desktop

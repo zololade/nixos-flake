@@ -9,6 +9,8 @@
     packages = with pkgs; [
       tree
       kdePackages.dolphin
+      vlc
+      libreoffice
     ];
   };
 

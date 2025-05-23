@@ -51,7 +51,7 @@
     wlogout
     wl-clipboard
     typescript
-    vscode
+    vscode-fhs
     google-chrome
     hyprsunset
     wireplumber   # PipeWire session manager (essential)
@@ -70,7 +70,12 @@
     github-desktop
     upower
     tlp
-    temurin-bin
     ];
+
+
+     programs.java = {
+       enable = true;
+       package = pkgs.jdk; # This installs the latest LTS version of OpenJDK
+     };
 
 }

@@ -12,7 +12,8 @@
         loginBackground = true;
       }
     )
-    
+
+    rofi-wayland    
     xdg-utils       
     jq
     libsecret

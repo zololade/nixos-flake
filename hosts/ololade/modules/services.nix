@@ -25,8 +25,9 @@
     package = pkgs.usbmuxd2;
   };
 
-
-
+  services.tumbler.enable = true;
+  services.gvfs.package = pkgs.gvfs;
+  services.gvfs.enable = true;
   services.tlp.enable = true;
   services.upower.enable = true;
   services.upower.package = pkgs.upower; 

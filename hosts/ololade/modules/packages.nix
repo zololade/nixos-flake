@@ -12,8 +12,7 @@
         loginBackground = true;
       }
     )
-    
-    kdePackages.dolphin
+       
     jq
     libsecret
     home-manager
@@ -73,5 +72,7 @@
       enable = true;
       package = pkgs.jdk; # This installs the latest LTS version of OpenJDK
     };
-
+    
+    
+    programs.thunar.enable = true;
 }

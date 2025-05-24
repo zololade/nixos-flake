@@ -5,4 +5,5 @@
     SDL_VIDEODRIVER = "wayland";
     WLR_NO_HARDWARE_CURSORS = "1"; # just in case of cursor bugs
   };
+
 }

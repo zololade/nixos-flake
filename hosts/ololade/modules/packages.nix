@@ -13,6 +13,7 @@
       }
     )
 
+    grim
     rofi-wayland    
     xdg-utils       
     jq

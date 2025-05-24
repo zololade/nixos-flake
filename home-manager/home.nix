@@ -31,6 +31,7 @@ in {
     adwaita-icon-theme
     pk.agsFull
     material-design-icons
+    protonvpn-gui
   ];
 
   # Configure your shell (e.g., bash, zsh)

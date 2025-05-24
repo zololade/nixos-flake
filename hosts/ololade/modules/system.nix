@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  time.timeZone = "Africa/Lagos"; # or your preferred TZ
+  #time.timeZone = "Africa/Lagos"; # or your preferred TZ
 
   i18n.defaultLocale = "en_US.UTF-8";
 

@@ -41,7 +41,6 @@
   programs.hyprland.withUWSM = true;
 
   services.dbus.enable = true;
-  services.geoclue2.enable = true;
   services.flatpak.enable = true;
   programs.firefox.enable = true;
   programs.gdk-pixbuf.modulePackages = [ pkgs.librsvg ]; 
@@ -50,7 +49,18 @@
   programs.seahorse.enable = true;  
   xdg.terminal-exec.enable = true;
    
+  services.geoclue2 = {
+    enable = true;
+    enableWifi = true;
+  };
+  
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    nssmdns6 = true;
 
+  };
+  
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

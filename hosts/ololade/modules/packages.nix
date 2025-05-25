@@ -23,7 +23,7 @@
     pciutils usbutils
     killall
     catppuccin-gtk catppuccin-papirus-folders catppuccin-cursors
-    vim
+    neovim
     wget
     eww
     btop

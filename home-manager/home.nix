@@ -22,7 +22,6 @@ in {
 
   # Install user packages
   home.packages = with pkgs; [
-    neovim
     htop
     git
     # Add any other packages you want installed for your user

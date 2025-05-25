@@ -13,7 +13,7 @@
       }
     )
     
-    corefonts
+    
     grim
     rofi-wayland    
     xdg-utils       
@@ -91,5 +91,9 @@
       enable = true;
     };
 
+
+    fonts.packages = with pkgs; [
+      corefonts
+    ];
 
 }

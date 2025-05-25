@@ -12,7 +12,8 @@
         loginBackground = true;
       }
     )
-
+    
+    corefonts
     grim
     rofi-wayland    
     xdg-utils       

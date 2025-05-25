@@ -12,8 +12,7 @@
         loginBackground = true;
       }
     )
-    
-    
+   
     grim
     rofi-wayland    
     xdg-utils       

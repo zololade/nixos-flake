@@ -70,16 +70,7 @@
     upower
     tlp
     gtk4
-    gtk3
     gtk4.dev
-    gtk3.dev
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-ugly
-    gst_all_1.gst-libav
-    gst_all_1.gst-devtools
     ];
 
     programs.java = {

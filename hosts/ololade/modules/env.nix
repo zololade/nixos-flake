@@ -6,4 +6,8 @@
     WLR_NO_HARDWARE_CURSORS = "1"; # just in case of cursor bugs
   };
 
+  environment.variables = {
+    EDITOR = "nvim";
+  };
+
 }

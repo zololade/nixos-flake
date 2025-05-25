@@ -72,6 +72,7 @@
     gtk4
     gtk3
     gtk4.dev
+    gtk3.dev
     gst_all_1.gstreamer
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-good

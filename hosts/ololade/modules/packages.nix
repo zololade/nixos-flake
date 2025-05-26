@@ -12,7 +12,8 @@
         loginBackground = true;
       }
     )
-   
+    
+    lazygit
     gnumake
     fd
     ripgrep		

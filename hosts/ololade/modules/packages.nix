@@ -13,6 +13,9 @@
       }
     )
    
+    gnumake
+    fd
+    ripgrep		
     grim
     rofi-wayland    
     xdg-utils       

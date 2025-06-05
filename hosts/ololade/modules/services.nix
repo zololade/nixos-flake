@@ -49,7 +49,8 @@
   programs.seahorse.enable = true;  
   xdg.terminal-exec.enable = true;
   services.automatic-timezoned.enable = true;
-   
+  programs.partition-manager.enable = true;
+
   services.geoclue2 = {
     enable = true;
     enableWifi = true;

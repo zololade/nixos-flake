@@ -9,7 +9,7 @@ in {
   home.homeDirectory = "/home/ololade"; # Make sure this matches your actual home directory
 
   # Home Manager needs to know where to install its packages
-  home.stateVersion = "24.11"; # Set this to your NixOS stateVersion or a Home Manager release (e.g., "24.11")
+  home.stateVersion = "25.05"; # Set this to your NixOS stateVersion or a Home Manager release (e.g., "24.11")
 
 
   xdg = {

@@ -26,6 +26,7 @@ in {
     git
     # Add any other packages you want installed for your user
     gtk4
+    testdisk
     libadwaita
     adwaita-icon-theme
     pk.agsFull

@@ -44,7 +44,7 @@ in {
     '';
   };
 
-#code
+  #code
   programs.vscode = {
     enable = true;
     package = pkgs.vscode;
@@ -57,27 +57,8 @@ in {
     userEmail = "73138104+zololade@users.noreply.github.com"; # IMPORTANT: Change this
   };
 
-#gtk = {
- # enable = true;
-
-  #theme = {
-   # name = "catppuccin-mocha-rosewater"; # Use the exact folder name
-    #package = null; # Since you're using a local theme
-  #};
-
-  #iconTheme = {
-   # name = "Papirus-Dark"; # or your Catppuccin icon theme name
-    #package = null;
-  #};
-
-  #cursorTheme = {
-   # name = "catppuccin-mocha-rosewater-cursors"; # optional
-    #package = null;
-  #};
-#};
-
-#wallpaper
-systemd.user.services.coolwall = {
+  #wallpaper
+  systemd.user.services.coolwall = {
     Unit = {
       Description = "CoolWall Script";
       After = [ "network-online.target" ];
@@ -94,7 +75,7 @@ systemd.user.services.coolwall = {
     };
   };
 
-#code
+  #code
   xdg.desktopEntries.code = {
     name = "Visual Studio Code";
     comment = "Code Editing. Redefined. (with Gnome Libsecret)";

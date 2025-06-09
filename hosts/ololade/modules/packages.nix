@@ -8,7 +8,6 @@
         flavor = "mocha";
         font  = "Noto Sans";
         fontSize = "9";
-        #background = "${./wallpaper.png}";
         loginBackground = true;
       }
     )

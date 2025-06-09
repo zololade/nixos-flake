@@ -22,10 +22,8 @@ in {
 
   # Install user packages
   home.packages = with pkgs; [
-    htop
     git
     # Add any other packages you want installed for your user
-    gtk4
     testdisk
     libadwaita
     adwaita-icon-theme

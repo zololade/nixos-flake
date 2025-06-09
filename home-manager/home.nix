@@ -47,7 +47,7 @@ in {
 #code
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode.fhs;
+    package = pkgs.vscode;
   };
 
   # Enable git configuration
@@ -57,24 +57,24 @@ in {
     userEmail = "73138104+zololade@users.noreply.github.com"; # IMPORTANT: Change this
   };
 
-gtk = {
-  enable = true;
+#gtk = {
+ # enable = true;
 
-  theme = {
-    name = "catppuccin-mocha-rosewater"; # Use the exact folder name
-    package = null; # Since you're using a local theme
-  };
+  #theme = {
+   # name = "catppuccin-mocha-rosewater"; # Use the exact folder name
+    #package = null; # Since you're using a local theme
+  #};
 
-  iconTheme = {
-    name = "Papirus-Dark"; # or your Catppuccin icon theme name
-    package = null;
-  };
+  #iconTheme = {
+   # name = "Papirus-Dark"; # or your Catppuccin icon theme name
+    #package = null;
+  #};
 
-  cursorTheme = {
-    name = "catppuccin-mocha-rosewater-cursors"; # optional
-    package = null;
-  };
-};
+  #cursorTheme = {
+   # name = "catppuccin-mocha-rosewater-cursors"; # optional
+    #package = null;
+  #};
+#};
 
 #wallpaper
 systemd.user.services.coolwall = {

@@ -37,7 +37,6 @@
     ranger
     unzip
     zip
-    gnome-tweaks
     brightnessctl
     nodejs 
     git
@@ -51,6 +50,7 @@
     kitty
     kdePackages.qt6ct kdePackages.qtstyleplugin-kvantum kdePackages.breeze-gtk
     kdePackages.breeze-icons kdePackages.okular
+    nwg-look
     cliphist
     wlogout
     wl-clipboard
@@ -73,8 +73,6 @@
     github-desktop
     upower
     tlp
-    gtk4
-    gtk4.dev
     ];
 
     programs.java = {

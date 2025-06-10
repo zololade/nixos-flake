@@ -94,6 +94,7 @@
 
     fonts.packages = with pkgs; [
       corefonts
+      fira-code
     ];
 
 }

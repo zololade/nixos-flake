@@ -2,6 +2,7 @@
 
 {
   networking.networkmanager.enable = true;
+  programs.nm-applet.enable = true;
   networking.hostName = "ololade";
   networking.firewall.enable = true;
 

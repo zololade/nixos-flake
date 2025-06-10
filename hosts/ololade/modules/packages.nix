@@ -11,7 +11,8 @@
         loginBackground = true;
       }
     )
-    
+   
+    home-manager
     lazygit
     gnumake
     fd
@@ -21,8 +22,7 @@
     xdg-utils       
     jq
     libsecret
-    home-manager
-    curl htop
+    curl
     pciutils usbutils
     killall
     catppuccin-gtk catppuccin-papirus-folders catppuccin-cursors
@@ -54,24 +54,17 @@
     wlogout
     wl-clipboard
     typescript
-    vscode-fhs
+    vscode
     google-chrome
     hyprsunset
     wireplumber   # PipeWire session manager (essential)
     pavucontrol   # GUI for audio management
     pamixer       # CLI volume control
-    xdg-desktop-portal
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
     swww
-    networkmanagerapplet   # GUI applet (for systems with a panel/tray)
-    bluez
-    kdePackages.bluez-qt
     libimobiledevice
     ifuse
     github-desktop
     upower
-    tlp
     ];
 
     programs.java = {

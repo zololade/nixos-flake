@@ -65,6 +65,14 @@
     ifuse
     github-desktop
     upower
+    unzip           # for .zip
+    p7zip           # for .7z, .7zip, .rar, etc.
+    unrar           # for .rar (optional, but useful)
+    xz              # for .xz
+    gzip            # for .gz
+    bzip2           # for .bz2
+    zstd            # for .zst
+    file-roller
     ];
 
     programs.java = {
@@ -74,6 +82,13 @@
     
     
     programs.thunar.enable = true;
+    programs.thunar.plugins = with pkgs.xfce; [ 
+      thunar-archive-plugin 
+      thunar-volman 
+      thunar-dropbox-plugin
+      thunar-media-tags-plugin
+      thunar-vcs-plugin
+    ];
 
     programs.fish = {
       enable = true;

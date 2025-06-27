@@ -36,7 +36,10 @@
     # Optional: Enable Plymouth for a graphical splash screen
     plymouth.enable = true;
     plymouth.theme = "nixos-bgrt";
-    plymouth.themePackages = [ pkgs.nixos-bgrt-plymouth ];
+    plymouth.themePackages = with pkgs; [ 
+      nixos-bgrt-plymouth
+      catppuccin-plymouth
+    ];
     # You can customize the theme and other settings as needed
   };
 

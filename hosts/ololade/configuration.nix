@@ -38,7 +38,6 @@
     plymouth.theme = "nixos-bgrt";
     plymouth.themePackages = with pkgs; [ 
       nixos-bgrt-plymouth
-      catppuccin-plymouth
     ];
     # You can customize the theme and other settings as needed
   };

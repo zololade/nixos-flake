@@ -39,7 +39,9 @@
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
   programs.hyprland.withUWSM = true;
-
+  
+  
+  services.fwupd.enable
   services.dbus.enable = true;
   services.flatpak.enable = true;
   programs.firefox.enable = true;

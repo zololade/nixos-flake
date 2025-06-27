@@ -41,7 +41,7 @@
   programs.hyprland.withUWSM = true;
   
   
-  services.fwupd.enable
+  services.fwupd.enable = true;
   services.dbus.enable = true;
   services.flatpak.enable = true;
   programs.firefox.enable = true;

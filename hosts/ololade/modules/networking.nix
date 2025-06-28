@@ -5,6 +5,9 @@
   programs.nm-applet.enable = true;
   networking.hostName = "ololade";
   networking.firewall.enable = true;
+  networking.networkmanager.dns = "systemd-resolved";
+  services.resolved.enable = true;
+  networking.tempAddresses = "enable";
 
   # Bluetooth
   hardware.bluetooth.settings = {

@@ -59,8 +59,8 @@ in {
   systemd.user.services.coolwall = {
     Unit = {
       Description = "CoolWall Script";
-      After = [ "network-online.target" ];
-      Wants = [ "network-online.target" ];
+      #After = [ "network-online.target" ];
+      #Wants = [ "network-online.target" ];
     };
 
     Service = {

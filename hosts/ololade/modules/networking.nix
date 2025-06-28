@@ -7,7 +7,7 @@
   networking.firewall.enable = true;
   networking.networkmanager.dns = "systemd-resolved";
   services.resolved.enable = true;
-  networking.tempAddresses = "enable";
+  networking.tempAddresses = "enabled";
 
   # Bluetooth
   hardware.bluetooth.settings = {

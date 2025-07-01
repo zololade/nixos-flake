@@ -1,9 +1,6 @@
 # ~/nixos-flake/hosts/ololade/home.nix
 { config, pkgs, inputs, ... }:
-
-#let
-#  pk = inputs.ags.packages.x86_64-linux;
-#in 
+ 
 {
   # Define your user's name
   home.username = "ololade";
@@ -28,7 +25,6 @@
     testdisk
     libadwaita
     adwaita-icon-theme
-    #pk.agsFull
     material-design-icons
     protonvpn-gui
   ];
@@ -43,7 +39,7 @@
     '';
   };
 
-  #code
+  #code setup
   programs.vscode = {
     enable = true;
     package = pkgs.vscode;
@@ -60,8 +56,6 @@
   systemd.user.services.coolwall = {
     Unit = {
       Description = "CoolWall Script";
-      #After = [ "network-online.target" ];
-      #Wants = [ "network-online.target" ];
     };
 
     Service = {

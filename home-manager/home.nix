@@ -27,7 +27,7 @@ in {
     testdisk
     libadwaita
     adwaita-icon-theme
-    pk.agsFull
+    #pk.agsFull
     material-design-icons
     protonvpn-gui
   ];

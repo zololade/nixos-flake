@@ -1,9 +1,10 @@
 # ~/nixos-flake/hosts/ololade/home.nix
 { config, pkgs, inputs, ... }:
 
-let
-  pk = inputs.ags.packages.x86_64-linux;
-in {
+#let
+#  pk = inputs.ags.packages.x86_64-linux;
+#in 
+{
   # Define your user's name
   home.username = "ololade";
   home.homeDirectory = "/home/ololade"; # Make sure this matches your actual home directory

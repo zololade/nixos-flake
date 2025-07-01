@@ -73,7 +73,6 @@
     bzip2           # for .bz2
     zstd            # for .zst
     file-roller
-    waybar
     ];
 
     programs.java = {
@@ -81,7 +80,9 @@
       package = pkgs.jdk; # This installs the latest LTS version of OpenJDK
     };
     
-    
+   
+    programs.waybar.enable = true;
+
     programs.thunar.enable = true;
     programs.thunar.plugins = with pkgs.xfce; [ 
       thunar-archive-plugin 

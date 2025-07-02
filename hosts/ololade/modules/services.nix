@@ -20,7 +20,7 @@
     #package = pkgs.kdePackages.sddm;
    #};
 
-  services.greetd.enable = {
+  services.greetd = {
    enable = true;
    package = pkgs.greetd.gtkgreet;
   };

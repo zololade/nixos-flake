@@ -22,7 +22,6 @@
 
   services.greetd = {
    enable = true;
-   package = pkgs.greetd.gtkgreet;
   };
 
   services.usbmuxd = {

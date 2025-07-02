@@ -18,7 +18,7 @@
     theme = "catppuccin-mocha";
     wayland.enable = true;
     package = pkgs.kdePackages.sddm;
-   };
+  };
 
   services.usbmuxd = {
     enable = true;

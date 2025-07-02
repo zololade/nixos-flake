@@ -73,6 +73,7 @@
     bzip2           # for .bz2
     zstd            # for .zst
     file-roller
+    inkscape-with-extensions
     ];
 
     programs.java = {

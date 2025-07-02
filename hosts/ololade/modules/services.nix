@@ -39,6 +39,7 @@
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
   programs.hyprland.withUWSM = true;
+  programs.uwsm.enable = true;
   
   
   services.fwupd.enable = true;

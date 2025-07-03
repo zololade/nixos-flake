@@ -74,6 +74,7 @@
     zstd            # for .zst
     file-roller
     inkscape-with-extensions
+    lm_sensors
     ];
 
     programs.java = {

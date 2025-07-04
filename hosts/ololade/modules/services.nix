@@ -13,11 +13,15 @@
     jack.enable = true;
   };
 
-  services.displayManager.sddm = {
+  #services.displayManager.sddm = {
+    #enable = true;
+    #theme = "catppuccin-mocha";
+    #wayland.enable = true;
+    #package = pkgs.kdePackages.sddm;
+  #};
+  
+  services.displayManager.ly = {
     enable = true;
-    theme = "catppuccin-mocha";
-    wayland.enable = true;
-    package = pkgs.kdePackages.sddm;
   };
 
   services.usbmuxd = {
@@ -48,8 +52,10 @@
   programs.firefox.enable = true;
   programs.gdk-pixbuf.modulePackages = [ pkgs.librsvg ]; 
   services.gnome.gnome-keyring.enable = true;
-  security.pam.services.sddm.enableGnomeKeyring = true;
-  security.pam.services.sddm.enable = true;
+  #security.pam.services.sddm.enableGnomeKeyring = true;
+  #security.pam.services.sddm.enable = true;
+  security.pam.services.ly.enableGnomeKeyring = true;
+  security.pam.services.ly.enable = true;
   programs.seahorse.enable = true;  
   xdg.terminal-exec.enable = true;
   services.automatic-timezoned.enable = true;

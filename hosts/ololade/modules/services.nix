@@ -30,7 +30,7 @@
         hide_borders = true;
         clock = "%c";
         bigclock = true;
-      }
+      };
   };
 
   services.usbmuxd = {

@@ -19,15 +19,10 @@
     #wayland.enable = true;
     #package = pkgs.kdePackages.sddm;
   #};
-  
-  services.greetd = {
+ 
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm = {
       enable = true;
-      settings = {
-          default_session = {
-              command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-              user = "greeter";
-            };
-        };
     };
 
   services.usbmuxd = {
@@ -58,8 +53,8 @@
   programs.firefox.enable = true;
   programs.gdk-pixbuf.modulePackages = [ pkgs.librsvg ]; 
   services.gnome.gnome-keyring.enable = true;
-  #security.pam.services.sddm.enableGnomeKeyring = true;
-  #security.pam.services.sddm.enable = true;
+  security.pam.services.gdm.enableGnomeKeyring = true;
+  security.pam.services.gdm.enable = true;
   programs.seahorse.enable = true;  
   xdg.terminal-exec.enable = true;
   services.automatic-timezoned.enable = true;

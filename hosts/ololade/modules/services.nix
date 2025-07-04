@@ -19,19 +19,6 @@
     #wayland.enable = true;
     #package = pkgs.kdePackages.sddm;
   #};
-  
-  services.displayManager.ly = {
-    enable = true;
-    settings = {
-        load = false;
-        save = false;
-        animate = true;
-        animation = "matrix";
-        hide_borders = true;
-        clock = "%c";
-        bigclock = true;
-      };
-  };
 
   services.usbmuxd = {
     enable = true;
@@ -63,8 +50,6 @@
   services.gnome.gnome-keyring.enable = true;
   #security.pam.services.sddm.enableGnomeKeyring = true;
   #security.pam.services.sddm.enable = true;
-  security.pam.services.ly.enableGnomeKeyring = true;
-  security.pam.services.ly.enable = true;
   programs.seahorse.enable = true;  
   xdg.terminal-exec.enable = true;
   services.automatic-timezoned.enable = true;

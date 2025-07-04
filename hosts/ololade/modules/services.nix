@@ -22,6 +22,15 @@
   
   services.displayManager.ly = {
     enable = true;
+    settings = {
+        load = false;
+        save = false;
+        animate = true;
+        animation = "matrix";
+        hide_borders = true;
+        clock = "%c";
+        bigclock = true;
+      }
   };
 
   services.usbmuxd = {

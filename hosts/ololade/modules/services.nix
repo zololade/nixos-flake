@@ -19,6 +19,16 @@
     #wayland.enable = true;
     #package = pkgs.kdePackages.sddm;
   #};
+  
+  services.greetd = {
+      enable = true;
+      settings = {
+          default_session = {
+              command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
+              user = "greeter";
+            };
+        };
+    };
 
   services.usbmuxd = {
     enable = true;

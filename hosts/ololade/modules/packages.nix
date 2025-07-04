@@ -4,14 +4,6 @@
   nixpkgs.config.allowUnfree = true;
   
   environment.systemPackages = with pkgs; [
-    #(catppuccin-sddm.override {
-        #flavor = "mocha";
-        #font  = "Noto Sans";
-        #fontSize = "9";
-        #loginBackground = true;
-      #}
-    #)
-   
     home-manager
     lazygit
     gnumake

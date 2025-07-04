@@ -12,13 +12,6 @@
     pulse.enable = true;
     jack.enable = true;
   };
-
-  #services.displayManager.sddm = {
-    #enable = true;
-    #theme = "catppuccin-mocha";
-    #wayland.enable = true;
-    #package = pkgs.kdePackages.sddm;
-  #};
  
   services.xserver.enable = true;
   services.xserver.displayManager.gdm = {

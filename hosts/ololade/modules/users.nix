@@ -16,26 +16,4 @@
     ];
   };
 
-  #gtk
-  gtk = {
-    enable = true;
-    theme = {
-      name = "catppuccin-mocha-rosewater";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "rosewater" ];
-        size = "compact";
-        variant = "mocha";
-      };
-    };
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-    cursorTheme = {
-      name = "catppuccin-mocha-rosewater-cursors";
-      package = pkgs.catppuccin-cursors;
-      size = 24;
-    };
-  };
-
 }

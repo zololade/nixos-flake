@@ -50,7 +50,6 @@
 
   # Configure your shell (e.g., bash, zsh)
   programs.bash = {
-    enable = true;
     completion.enable = true;
   };
 

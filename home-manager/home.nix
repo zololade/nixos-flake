@@ -44,6 +44,18 @@
     };
   };
 
+  #git
+  programs.git = {
+    userName = "ololade";
+    userEmail = "73138104+zololade@users.noreply.github.com";
+  };
+
+  #code setup
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode;
+  };
+
   #code
   xdg.desktopEntries.code = {
     name = "Visual Studio Code";

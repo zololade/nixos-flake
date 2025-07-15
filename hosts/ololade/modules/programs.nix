@@ -46,14 +46,6 @@
   # Enable git configuration
   programs.git = {
     enable = true;
-    userName = "ololade";
-    userEmail = "73138104+zololade@users.noreply.github.com"; # IMPORTANT: Change this
-  };
-
-  #code setup
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscode;
   };
 
   # Configure your shell (e.g., bash, zsh)

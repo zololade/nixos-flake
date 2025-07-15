@@ -41,10 +41,11 @@
   services.dbus.enable = true;
   services.flatpak.enable = true; 
 
-  #pam/keyring
+  #pam/keyring/polkit
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.gdm.enableGnomeKeyring = true;
   security.pam.services.gdm.enable = true; 
+  security.polkit.enable = true;
 
   #timezone
   services.automatic-timezoned.enable = true;

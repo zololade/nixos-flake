@@ -17,7 +17,6 @@
     curl
     pciutils usbutils
     killall
-    papirus-icon-theme
     catppuccin-gtk catppuccin-papirus-folders catppuccin-cursors
     wget
     eww

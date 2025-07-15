@@ -57,13 +57,13 @@
   };
 
   #code
-  xdg.desktopEntries.code = {
-    name = "Visual Studio Code";
-    comment = "Code Editing. Redefined. (with Gnome Libsecret)";
-    exec = "${pkgs.vscode}/bin/code --password-store=gnome-libsecret %U";
-    icon = "code";
-    terminal = false;
-    categories = [ "Development" "IDE" ];
-  };
+  #xdg.desktopEntries.code = {
+    #name = "Visual Studio Code";
+    #comment = "Code Editing. Redefined. (with Gnome Libsecret)";
+    #exec = "${pkgs.vscode}/bin/code --password-store=gnome-libsecret %U";
+    #icon = "code";
+    #terminal = false;
+    #categories = [ "Development" "IDE" ];
+  #};
 
 }

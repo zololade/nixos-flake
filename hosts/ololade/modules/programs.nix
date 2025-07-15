@@ -59,11 +59,7 @@
   # Configure your shell (e.g., bash, zsh)
   programs.bash = {
     enable = true;
-    enableCompletion = true;
-    initExtra = ''
-      # Your custom bash configurations here
-      alias ll="ls -lh"
-    '';
+    completion = true;
   };
 
 }

@@ -20,7 +20,6 @@
 
   # Install user packages
   home.packages = with pkgs; [
-    git
     # Add any other packages you want installed for your user
     testdisk
     libadwaita
@@ -28,29 +27,6 @@
     material-design-icons
     protonvpn-gui
   ];
-
-  # Configure your shell (e.g., bash, zsh)
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
-    initExtra = ''
-      # Your custom bash configurations here
-      alias ll="ls -lh"
-    '';
-  };
-
-  #code setup
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscode;
-  };
-
-  # Enable git configuration
-  programs.git = {
-    enable = true;
-    userName = "ololade";
-    userEmail = "73138104+zololade@users.noreply.github.com"; # IMPORTANT: Change this
-  };
 
   #wallpaper
   systemd.user.services.coolwall = {

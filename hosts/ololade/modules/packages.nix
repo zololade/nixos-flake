@@ -19,7 +19,6 @@
     killall
     papirus-icon-theme
     catppuccin-gtk catppuccin-papirus-folders catppuccin-cursors
-    neovim
     wget
     eww
     btop
@@ -31,14 +30,12 @@
     zip
     brightnessctl
     nodejs 
-    git
     python3 
     gcc 
     nmap
     gammastep
     imv
     dunst
-    flatpak
     kitty
     kdePackages.qt6ct kdePackages.qtstyleplugin-kvantum kdePackages.breeze-gtk
     kdePackages.breeze-icons kdePackages.okular
@@ -47,7 +44,6 @@
     wlogout
     wl-clipboard
     typescript
-    vscode
     google-chrome
     hyprsunset
     wireplumber   # PipeWire session manager (essential)
@@ -57,7 +53,6 @@
     libimobiledevice
     ifuse
     github-desktop
-    upower
     unzip           # for .zip
     p7zip           # for .7z, .7zip, .rar, etc.
     unrar           # for .rar (optional, but useful)
@@ -69,33 +64,6 @@
     inkscape-with-extensions
     lm_sensors
     ];
-
-    programs.java = {
-      enable = true;
-      package = pkgs.jdk; # This installs the latest LTS version of OpenJDK
-    };
-    
-   
-    programs.waybar.enable = true;
-
-    programs.thunar.enable = true;
-    programs.thunar.plugins = with pkgs.xfce; [ 
-      thunar-archive-plugin 
-      thunar-volman 
-      thunar-dropbox-plugin
-      thunar-media-tags-plugin
-      thunar-vcs-plugin
-    ];
-
-    programs.fish = {
-      enable = true;
-    };
-   
-
-    programs.starship = {
-      enable = true;
-    };
-
 
     fonts.packages = with pkgs; [
       corefonts

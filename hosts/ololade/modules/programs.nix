@@ -59,7 +59,7 @@
   # Configure your shell (e.g., bash, zsh)
   programs.bash = {
     enable = true;
-    completion = true;
+    completion.enable = true;
   };
 
 }

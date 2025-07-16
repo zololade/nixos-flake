@@ -26,7 +26,6 @@
     fastfetch
     fzf
     ranger
-    unzip
     zip
     brightnessctl
     nodejs 

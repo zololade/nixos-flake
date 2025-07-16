@@ -14,6 +14,7 @@
       ./modules/services.nix
       ./modules/users.nix
       ./modules/env.nix
+      ./modules/hardwareGraphics.nix
      ];
 
   system.stateVersion = "25.05";

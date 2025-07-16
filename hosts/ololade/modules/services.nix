@@ -11,8 +11,16 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     jack.enable = true;
+    extraConfig.pipewire = {
+      "context.properties" = {
+        "default.clock.rate" = 48000;
+        "default.clock.quantum" = 1024;
+        "default.clock.min-quantum" = 512;
+        "default.clock.max-quantum" = 4096;
+      };
+    };
   };
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
  
   #displayManager

@@ -4,6 +4,7 @@
   nixpkgs.config.allowUnfree = true;
   
   environment.systemPackages = with pkgs; [
+    lxqt.lxqt-policykit
     home-manager
     lazygit
     gnumake

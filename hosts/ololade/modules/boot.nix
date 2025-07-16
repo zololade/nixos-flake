@@ -3,6 +3,9 @@
 {
 
  boot = {
+    #kernel
+    kernelPackages = pkgs.linuxPackages_zen;
+    
     # Use the systemd-boot EFI boot loader.
     loader.systemd-boot = {
       enable = true;

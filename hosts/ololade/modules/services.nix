@@ -12,6 +12,8 @@
     pulse.enable = true;
     jack.enable = true;
   };
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
  
   #displayManager
   services.xserver.enable = true;

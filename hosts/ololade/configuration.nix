@@ -14,7 +14,6 @@
       ./modules/services.nix
       ./modules/users.nix
       ./modules/env.nix
-      ./modules/udev/iphone-tethering.nix
      ];
 
   system.stateVersion = "25.05";

@@ -45,7 +45,6 @@
     typescript
     google-chrome
     hyprsunset
-    wireplumber   # PipeWire session manager (essential)
     pavucontrol   # GUI for audio management
     pamixer       # CLI volume control
     swww

@@ -6,13 +6,10 @@
   hardware.graphics.enable32Bit = true;    
 
   hardware.graphics.extraPackages = with pkgs; [
-    intel-media-driver      
-    libva-utils          
-    intel-ocl
+    intel-media-driver
+    intel-vaapi-driver
+    libvdpau-va-gl
+    vpl-gpu-rt
+    intel-media-sdk
   ];
-
-  hardware.graphics.extraPackages32 = with pkgs; [
-    intel-media-driver      
-  ];
-
 }

@@ -7,6 +7,9 @@
     lxqt.lxqt-policykit
     home-manager
     lazygit
+    libva-utils
+    vulkan-tools
+    mesa-utils
     gnumake
     fd
     ripgrep		

@@ -11,18 +11,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     jack.enable = true;
-    extraConfig = {
-      "context.modules" = [
-      # This disables the x11-bell module
-        {
-          name = "libpipewire-module-x11-bell";
-          args = {
-          "server" = "off";  # Prevent it from trying to load
-          };
-        }
-      ];
-    };
-
   };
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

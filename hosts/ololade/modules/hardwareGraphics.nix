@@ -11,7 +11,6 @@
     vpl-gpu-rt
     vaapiIntel
     vulkan-loader
-    vulkan-tools
     vulkan-intel
   ];
 }

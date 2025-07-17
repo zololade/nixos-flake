@@ -29,6 +29,7 @@
   #filemanager/usb-connetion
   services.usbmuxd = {
     enable = true;
+    package = pkgs.usbmuxd2;
   };
   services.gvfs.enable = true;
   services.gvfs.package = pkgs.gvfs;

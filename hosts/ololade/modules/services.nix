@@ -17,9 +17,8 @@
 
   #media
   services.xserver = {
-      enable = true;
-      videoDrivers = [ "modesetting" ];
-    };
+    videoDrivers = [ "modesetting" ];
+  };
 
   #displayManager
   services.xserver.enable = true;

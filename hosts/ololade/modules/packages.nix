@@ -9,7 +9,6 @@
     lazygit
     libva-utils
     vulkan-tools
-    mesa-utils
     gnumake
     fd
     ripgrep		

@@ -35,7 +35,7 @@
   services.tumbler.enable = true;
   
   #power
-  services.tlp.enable = true;
+  #services.tlp.enable = true;
   services.upower.enable = true;
   services.upower.package = pkgs.upower; 
 

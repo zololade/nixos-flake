@@ -9,6 +9,8 @@
     lazygit
     libva-utils
     vulkan-tools
+    ffmpeg
+    mpv
     gnumake
     fd
     ripgrep		

@@ -7,6 +7,7 @@
     lxqt.lxqt-policykit
     home-manager
     lazygit
+    alsa-utils
     libva-utils
     vulkan-tools
     ffmpeg

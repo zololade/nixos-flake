@@ -53,4 +53,9 @@
     completion.enable = true;
   };
 
+  #appimage
+  programs.appimage = {
+  enable = true;
+  binfmt = true;
+  };
 }
